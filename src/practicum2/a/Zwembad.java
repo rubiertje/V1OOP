@@ -10,7 +10,6 @@ public class Zwembad {
         this.lengte = lengte;
         this.diepte = diepte;
     }
-
     public Zwembad(){}
 
     public Double inhoud(){
