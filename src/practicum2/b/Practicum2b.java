@@ -10,8 +10,8 @@ public class Practicum2b {
         feij.verwerkResultaat('w');
         feij.verwerkResultaat('g');
 
-        System.out.println("Feijenoord punten: " + feij.aantalPunten());
-        System.out.println("Ajax gespeeld: " + ajx.aantalGespeeld());
+        System.out.println("Feijenoord punten: " + feij.getAantalPunten());
+        System.out.println("Ajax gespeeld: " + ajx.getAantalGespeeld());
         System.out.println();
 
         System.out.println(ajx);
