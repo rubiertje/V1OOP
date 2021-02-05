@@ -1,6 +1,6 @@
 package practicum2.b;
 
-public class Voetbalclub {
+public class Voetbalclub{
     private String naam;
     private Integer aantalGespeeld;
     private Integer aantalGewonnen;
@@ -13,6 +13,12 @@ public class Voetbalclub {
     }
 
     public void verwerkResultaat(char ch){
+        if (aantalGewonnen == null)
+            aantalGewonnen = 0;
+        if (aantalGelijk == null)
+            aantalGelijk = 0;
+        if (aantalVerloren == null)
+            aantalVerloren = 0;
         if (ch == 'w')
             aantalGewonnen = aantalGewonnen + 1;
         if (ch == 'g')
@@ -22,14 +28,32 @@ public class Voetbalclub {
     }
 
     public Integer getAantalGespeeld(){
-        if (aantalGespeeld == null)
-            aantalPunten = 0;
+        if (aantalGewonnen == null)
+            aantalGewonnen = 0;
+        if (aantalGelijk == null)
+            aantalGelijk = 0;
+        if (aantalVerloren == null)
+            aantalVerloren = 0;
+        aantalGespeeld = aantalGewonnen + aantalGelijk + aantalVerloren;
         return aantalGespeeld;
     }
 
     public Integer getAantalPunten(){
+        aantalPunten = aantalGewonnen*3 + aantalGelijk;
+        return aantalPunten;
+    }
+
+    public String toString(){
+        if (aantalGewonnen == null)
+            aantalGewonnen = 0;
+        if (aantalGelijk == null)
+            aantalGelijk = 0;
+        if (aantalVerloren == null)
+            aantalVerloren = 0;
         if (aantalPunten == null)
             aantalPunten = 0;
-        return aantalPunten;
+        if (aantalGespeeld == null)
+            aantalGespeeld = 0;
+        return naam + "   " + aantalGespeeld + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten;
     }
 }
