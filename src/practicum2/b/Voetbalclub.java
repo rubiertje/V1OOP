@@ -50,10 +50,6 @@ public class Voetbalclub{
             aantalGelijk = 0;
         if (aantalVerloren == null)
             aantalVerloren = 0;
-        if (aantalPunten == null)
-            aantalPunten = 0;
-        if (aantalGespeeld == null)
-            aantalGespeeld = 0;
-        return naam + "   " + aantalGespeeld + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten;
+        return naam + "   " + getAantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + getAantalPunten();
     }
 }
