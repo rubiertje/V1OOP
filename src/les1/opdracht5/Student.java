@@ -1,4 +1,4 @@
-package week1.les1.opdracht5;
+package les1.opdracht5;
 
 public class Student {
     private String naam;
