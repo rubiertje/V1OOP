@@ -21,17 +21,17 @@ public class Voetbalclub{
             aantalVerloren = aantalVerloren + 1;
     }
 
-    public int getAantalGespeeld(){
+    public int aantalGespeeld(){
         aantalGespeeld = aantalGewonnen + aantalGelijk + aantalVerloren;
         return aantalGespeeld;
     }
 
-    public int getAantalPunten(){
+    public int aantalPunten(){
         aantalPunten = aantalGewonnen*3 + aantalGelijk;
         return aantalPunten;
     }
 
     public String toString(){
-        return naam + "   " + getAantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + getAantalPunten();
+        return naam + "   " + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
     }
 }
