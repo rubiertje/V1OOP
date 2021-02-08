@@ -8,6 +8,9 @@ public class Rekening {
         this.nummer = nummer;
         this.saldo = saldo;
     }
+    public Rekening(Integer nummer){
+        this.nummer = nummer;
+    }
 
     public int getNummer(){
         return this.nummer;
