@@ -14,6 +14,7 @@ public class Practicum2b {
         System.out.println("Ajax gespeeld: " + ajx.aantalGespeeld());
         System.out.println();
 
+        System.out.println("test");
         System.out.println(ajx);
         System.out.println(feij);
     }
