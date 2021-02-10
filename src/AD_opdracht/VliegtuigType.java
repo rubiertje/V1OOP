@@ -1,6 +1,4 @@
-package opdracht_AD;
-
-import java.util.ArrayList;
+package AD_opdracht;
 
 public class VliegtuigType {
     private String code;

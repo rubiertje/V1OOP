@@ -1,4 +1,4 @@
-package opdracht_AD;
+package AD_opdracht;
 
 import java.util.ArrayList;
 
@@ -16,5 +16,4 @@ public class LuchtvaartMaatschappij {
     public ArrayList<Vliegtuig> geefVliegtuigen(){
         return vliegtuigen;
     }
-
 }

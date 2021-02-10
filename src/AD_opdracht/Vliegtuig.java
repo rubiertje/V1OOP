@@ -1,4 +1,4 @@
-package opdracht_AD;
+package AD_opdracht;
 
 import java.time.LocalDate;
 
