@@ -13,5 +13,7 @@ public class VliegtuigType {
         this.fabrikant = fabrikant;
     }
 
-    public int geefCapaciteit(){}
+    public int geefCapaciteit(){
+        return capaciteit;
+    }
 }

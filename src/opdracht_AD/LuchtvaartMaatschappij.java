@@ -1,5 +1,7 @@
 package opdracht_AD;
 
+import java.util.ArrayList;
+
 public class LuchtvaartMaatschappij {
     private String naam;
     private ArrayList<Vliegtuig> vliegtuigen;
@@ -8,7 +10,11 @@ public class LuchtvaartMaatschappij {
         this.naam = naam;
     }
 
-    public void addVliegtuig(String vliegtuig){}
-    public String geefVliegtuigen(){}
+    public void addVliegtuig(String vliegtuig){
+//        vliegtuigen.add(1, vliegtuig);
+    }
+    public ArrayList<Vliegtuig> geefVliegtuigen(){
+        return vliegtuigen;
+    }
 
 }

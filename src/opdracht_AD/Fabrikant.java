@@ -7,6 +7,10 @@ public class Fabrikant {
     private static ArrayList<Fabrikant> alleFrabrikanten;
     private ArrayList<VliegtuigType> vliegtuigTypen;
 
-    private static ArrayList<Fabrikant> geefAlle(){}
-    public ArrayList<VliegtuigType> geefVliegtuigTypen(){}
+    private static ArrayList<Fabrikant> geefAlle(){
+        return alleFrabrikanten;
+    }
+    public ArrayList<VliegtuigType> geefVliegtuigTypen(){
+        return vliegtuigTypen;
+    }
 }

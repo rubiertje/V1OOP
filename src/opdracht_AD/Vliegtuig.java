@@ -11,7 +11,13 @@ public class Vliegtuig {
     public Vliegtuig(LuchtvaartMaatschappij lvm) {
         this.lvm = lvm;
     }
-    private void zetVliegtuigType(VliegtuigType type){}
-    private LocalDate geefDatumInGebruik(){}
-    public void bewaar(){}
+    private void zetVliegtuigType(VliegtuigType type){
+        this.vliegtuigType = type;
+    }
+    private LocalDate geefDatumInGebruik(){
+        return datumInGebruik;
+    }
+    public void bewaar(){
+//        idk...
+    }
 }
