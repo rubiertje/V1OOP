@@ -9,8 +9,8 @@ public class Rekening {
         this.nummer = nummer;
     }
 
-    public void setRekeningHouder(Klant rekeningHouder){
-        this.rekeninghouder = rekeningHouder;
+    public void setRekeningHouder(Klant rekeninghouder){
+        this.rekeninghouder = rekeninghouder;
     }
 
     public Klant getRekeninghouder() {
@@ -37,9 +37,9 @@ public class Rekening {
         String rekeninginfo = "Op rekening " + nummer + " is het saldo: " + saldo;
         String rekeninghouderinfo = "";
         try{
-            rekeninghouderinfo += "De rekeninghouder is onbekend";
-        }catch (Exception e){
             rekeninghouderinfo += "Klantnaam: " + this.rekeninghouder.getNaam();
+        }catch (Exception e){
+            rekeninghouderinfo += "De rekeninghouder is onbekend";
         }
         return rekeninginfo + "\n" + rekeninghouderinfo;
     }
