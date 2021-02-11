@@ -1,4 +1,4 @@
-package les4.opdracht4;
+package les4.opdracht4.een;
 
 public class Main {
     public static void main(String[] arg) {
@@ -15,5 +15,4 @@ public class Main {
         hd2.setBaasje(e2);
         System.out.println(hd2);
     }
-
 }

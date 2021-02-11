@@ -1,4 +1,4 @@
-package les4.opdracht4;
+package les4.opdracht4.een;
 
 public class Huisdier {
     private String naam;
@@ -28,5 +28,4 @@ public class Huisdier {
             return "en de eigenaar is " + eigenaar.toString();
         }else{return "en de eigenaar is null";}
     }
-
 }

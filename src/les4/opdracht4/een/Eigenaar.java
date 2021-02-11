@@ -1,4 +1,4 @@
-package les4.opdracht4;
+package les4.opdracht4.een;
 
 public class Eigenaar {
     private String naam;
@@ -16,5 +16,4 @@ public class Eigenaar {
     public String toString() {
         return naam + " heeft giro " + giroNr;
     }
-
 }
