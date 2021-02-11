@@ -11,7 +11,7 @@ class RekeningTest {
 
     @BeforeEach
     public void createRekening(){
-        this.r = new Rekening(23423, 0.00);
+        this.r = new Rekening(23423);
     }
 
     @Test
