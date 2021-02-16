@@ -33,7 +33,10 @@ public class AutoHuur {
 
     public double totaalPrijs(){
         double prijs = aantalDagen * gehuurdeAuto.getPrijsPerDag();
-        double korting = prijs * (1-huurder.getKorting()/100);
+        double korting = 0.0;
+        if (huurder == null){
+            korting += prijs * 1;
+        }else{korting += prijs * (1-huurder.getKorting()/100);}
         return Math.round(korting);
     }
 
