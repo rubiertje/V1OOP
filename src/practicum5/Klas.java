@@ -29,6 +29,6 @@ public class Klas {
         return leerlingen.size();
     }
     public String toString(){
-        return "In de klas " + klasCode + "zitten de volgende leerlingen:\n" + getLeerlingen().toString().replace(", ", "").replace("[","").replace("]","");
+        return "In de klas " + klasCode + " zitten de volgende leerlingen:\n" + getLeerlingen().toString().replace(", ", "").replace("[","").replace("]","");
     }
 }
