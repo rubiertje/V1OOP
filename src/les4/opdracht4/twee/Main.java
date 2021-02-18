@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] arg) {
-        ArrayList<Huisdier> huisdieren = new ArrayList<>();
+        ArrayList<Huisdier> huisdieren = new ArrayList<Huisdier>();
         Eigenaar e1 = new Eigenaar("Willem de Moller");
 
         Huisdier hd1 = new Huisdier("ruben", "mens");
