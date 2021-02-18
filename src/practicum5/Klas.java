@@ -16,7 +16,6 @@ public class Klas {
     }
     public void wijzigCijfer(String naam, double nweCijfer){
         for (Leerling l : leerlingen){
-            System.out.println(l);
             if (l.getNaam().equals(naam)) {
                 l.setCijfer(nweCijfer);
                 break;
