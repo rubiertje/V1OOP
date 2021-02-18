@@ -11,6 +11,21 @@ public class Huisdier {
         gewicht = 0.0;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setRas(String ras) {
+        this.ras = ras;
+    }
+
+    public double getGewicht() {
+        return gewicht;
+    }
+
+    public void setGewicht(double gewicht){
+        this.gewicht = gewicht;
+    }
     public String getNaam() { return naam; }
     public String getRas()  { return ras; }
 

@@ -1,20 +1,36 @@
 package les4.opdracht4.twee;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] arg) {
+        ArrayList<Huisdier> huisdieren = new ArrayList<>();
         Eigenaar e1 = new Eigenaar("Willem de Moller");
-        System.out.println(e1);
-        e1.setBeestje( new Huisdier("Nero", "Dobermann") );
-        System.out.println(e1);
+
+        Huisdier hd1 = new Huisdier("ruben", "mens");
+        hd1.setGewicht(70.0);
+        huisdieren.add(hd1);
+
+        Huisdier hd2 = new Huisdier("dfjkal", "Dobbermann");
+        e1.setBeestje(hd2);
+        huisdieren.add(hd2);
+
+        huisdieren.add(new Huisdier("zaza", "kakkerlak"));
+
+        System.out.println("De lengte van de lijst: " + huisdieren.size());
         System.out.println();
 
-        Eigenaar e2 = new Eigenaar("Pluk");
-        System.out.println(e2);
-        e2.setBeestje( new Huisdier("Zaza", "kakkerlak") );
-        System.out.println(e2);
+
+        for (int i = 0; i < huisdieren.size(); i++){
+            System.out.println("Huisdiernummer " + i + ": " + huisdieren.get(i));
+        }
+
         System.out.println();
 
-        System.out.println(e1.getBeestje());
-        System.out.println(e2.getBeestje());
+        huisdieren.add(0,new Huisdier("jo", "poes"));
+
+        huisdieren.set(2,hd1);
+
+        System.out.println(huisdieren);
     }
 }
