@@ -1,42 +1,42 @@
 package practicum2.a;
 
 public class Zwembad {
-    private Double breedte;
-    private Double lengte;
-    private Double diepte;
+    private double breedte;
+    private double lengte;
+    private double diepte;
 
-    public Zwembad(Double breedte, Double lengte, Double diepte){
+    public Zwembad(double breedte, double lengte, double diepte){
         this.breedte = breedte;
         this.lengte = lengte;
         this.diepte = diepte;
     }
     public Zwembad(){}
 
-    public Double inhoud(){
+    public double inhoud(){
         return breedte*diepte*lengte;
     }
 
-    public void setBreedte(Double breedte){
+    public void setBreedte(double breedte){
         this.breedte = breedte;
     }
 
-    public void setLengte(Double lengte){
+    public void setLengte(double lengte){
         this.lengte = lengte;
     }
 
-    public void setDiepte(Double diepte){
+    public void setDiepte(double diepte){
         this.diepte = diepte;
     }
 
-    public Double getBreedte(){
+    public double getBreedte(){
         return breedte;
     }
 
-    public Double getLengte(){
+    public double getLengte(){
         return lengte;
     }
 
-    public Double getDiepte(){
+    public double getDiepte(){
         return diepte;
     }
 

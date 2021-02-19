@@ -4,11 +4,20 @@ public class Klant {
     private String naam;
     private String adres;
     private String plaats;
+    private Rekening mijnRekening;
 
     public Klant(String naam, String adres, String plaats) {
         this.naam = naam;
         this.adres = adres;
         this.plaats = plaats;
+    }
+
+    public Rekening getMijnRekening() {
+        return mijnRekening;
+    }
+
+    public void setMijnRekening(Rekening mijnRekening) {
+        this.mijnRekening = mijnRekening;
     }
 
     public void setPlaats(String plaats) {
@@ -31,11 +40,10 @@ public class Klant {
         return plaats;
     }
 
+    @Override
     public String toString() {
-        return "Klant{" +
-                "naam='" + naam + '\'' +
-                ", adres='" + adres + '\'' +
-                ", plaats='" + plaats + '\'' +
-                '}';
+        String klantinfo = getNaam() + " woont in " + plaats;
+        String rekeninginfo = this.mijnRekening + " ";
+        return klantinfo + "\n" + rekeninginfo;
     }
 }

@@ -1,13 +1,9 @@
 package les2.oefening;
 
 public class Rekening {
-    private Integer nummer;
-    private Double saldo;
+    private int nummer;
+    private Double saldo = 0.0;
 
-    public Rekening(Integer nummer, Double saldo){
-        this.nummer = nummer;
-        this.saldo = saldo;
-    }
     public Rekening(Integer nummer){
         this.nummer = nummer;
     }
