@@ -8,7 +8,7 @@ public class Klas {
 
     Klas (String klasCode){
         this.klasCode = klasCode;
-        leerlingen = new ArrayList<Leerling>();
+        leerlingen = new ArrayList<>();
     }
     public void voegLeerlingToe(Leerling leerling){
         leerlingen.add(leerling);
