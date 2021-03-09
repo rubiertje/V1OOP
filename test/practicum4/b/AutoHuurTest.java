@@ -79,12 +79,14 @@ class AutoHuurTest {
 
     @Test
     public void OngeldigeAuto(){
-        assertEquals("er is geen auto bekend", ongeldigeAuto.toString());
+        ah.setHuurder(k);
+        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
     public void OngeldigeKlant(){
-        assertEquals("er is geen huurder bekend", ongeldigeKlant.toString());
+        ah.setGehuurdeAuto(a);
+        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
