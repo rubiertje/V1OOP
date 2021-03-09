@@ -90,7 +90,7 @@ class AutoHuurTest {
     }
 
     @Test
-    public void OngeldigBeide(){
+    public void BeideOngeldig(){
         ah.setHuurder(ongeldigeKlant);
         ah.setGehuurdeAuto(ongeldigeAuto);
         assertEquals("  er is geen auto bekend\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
