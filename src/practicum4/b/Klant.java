@@ -5,7 +5,11 @@ public class Klant {
     private double kortingsPercentage;
 
     public Klant(String naam){
-        this.naam = naam;
+        if (naam.equals("")){
+            this.naam = null;
+        }else {
+            this.naam = naam;
+        }
     }
     public void setKorting(double kortingsPercentage){
         this.kortingsPercentage = kortingsPercentage;
@@ -14,6 +18,10 @@ public class Klant {
         return kortingsPercentage;
     }
     public String toString(){
-        return "op naam van: " + naam + " (korting: " + kortingsPercentage + "%)";
+        if (this.naam == null){
+            return "er is geen huurder bekend";
+        }else{
+            return "op naam van: " + naam + " (korting: " + kortingsPercentage + "%)";
+        }
     }
 }

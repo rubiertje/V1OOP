@@ -3,6 +3,7 @@ package practicum4.b;
 public class Main {
     public static void main(String[] args) {
         AutoHuur ah1 = new AutoHuur();
+
         System.out.println("Eerste autohuur:\n" + ah1 + "\n");
 
         Klant k = new Klant("Mijnheer de Vries");

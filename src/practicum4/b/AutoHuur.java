@@ -5,7 +5,9 @@ public class AutoHuur {
     private Klant huurder;
     private Auto gehuurdeAuto;
 
-    public AutoHuur(){}
+    public AutoHuur(){
+        this.aantalDagen = 0;
+    }
 
     public int getAantalDagen() {
         return aantalDagen;

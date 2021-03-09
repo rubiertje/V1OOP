@@ -5,8 +5,12 @@ public class Auto {
     private double prijsPerDag;
 
     public Auto(String type, double prijsPerDag){
-        this.type = type;
-        this.prijsPerDag = prijsPerDag;
+        if (type.equals("")){
+            this.type = null;
+        }else {
+            this.type = type;
+            this.prijsPerDag = prijsPerDag;
+        }
     }
 
     public void setPrijsPerDag(double prijsPerDag) {
@@ -18,6 +22,10 @@ public class Auto {
     }
 
     public String toString() {
-        return "autotype: " + type + " met prijs per dag: " + prijsPerDag;
+        if (this.type == null){
+            return "er is geen auto bekend";
+        }else {
+            return "autotype: " + type + " met prijs per dag: " + prijsPerDag;
+        }
     }
 }

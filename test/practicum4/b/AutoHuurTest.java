@@ -1,5 +1,6 @@
 package practicum4.b;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,58 +17,80 @@ class AutoHuurTest {
      4. een huur zonder auto, maar met een kant zonder korting.
      5. een huur met een auto en met een klant met korting.
      6. een huur met een auto en met een klant zonder korting.
+     7. een auto met ongeldige invoer.
+     8. een klant met ongeldige invoer.
+     9. een huur met ongeldige invoer van de klant en de auto.
      **/
+    private AutoHuur ah;
+    private Auto a;
+    private Auto ongeldigeAuto;
+    private Klant k;
+    private Klant ongeldigeKlant;
+
+    @BeforeEach
+    public void voorelketest(){
+        this.ah = new AutoHuur();
+        this.a = new Auto("Peugeot 207", 50);
+        this.ongeldigeAuto = new Auto("",32);
+        this.k = new Klant("Mijnheer de Vries");
+        this.ongeldigeKlant = new Klant("");
+    }
+
     @Test
     public void toStringGeenAutoGeenKlant(){
-        AutoHuur ah1 = new AutoHuur();
-        assertEquals("  er is geen auto bekend\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah1.toString());
+        assertEquals("  er is geen auto bekend\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
     public void toStringWelAutoGeenKlant(){
-        AutoHuur ah1 = new AutoHuur();
-        Auto a1 = new Auto("Peugeot 207", 50);
-        ah1.setGehuurdeAuto(a1);
-        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah1.toString());
+        ah.setGehuurdeAuto(a);
+        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
     public void toStringGeenAutoWelKlantMetKorting(){
-        AutoHuur ah1 = new AutoHuur();
-        Klant k = new Klant("Mijnheer de Vries");
-        ah1.setHuurder(k);
+        ah.setHuurder(k);
         k.setKorting(10.0);
-        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 10.0%)\n  aantal dagen: 0 en dat kost 0.0", ah1.toString());
+        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 10.0%)\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
     public void toStringGeenAutoWelKlantZonderKorting(){
-        AutoHuur ah1 = new AutoHuur();
-        Klant k = new Klant("Mijnheer de Vries");
-        ah1.setHuurder(k);
-        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 0 en dat kost 0.0", ah1.toString());
+        ah.setHuurder(k);
+        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 
     @Test
     public void toStringWelAutoWelKlantMetKorting(){
-        AutoHuur ah1 = new AutoHuur();
-        Auto a1 = new Auto("Peugeot 207", 50);
-        Klant k = new Klant("Mijnheer de Vries");
-        ah1.setHuurder(k);
+        ah.setHuurder(k);
         k.setKorting(10.0);
-        ah1.setGehuurdeAuto(a1);
-        ah1.setAantalDagen(4);
-        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  op naam van: Mijnheer de Vries (korting: 10.0%)\n  aantal dagen: 4 en dat kost 180.0", ah1.toString());
+        ah.setGehuurdeAuto(a);
+        ah.setAantalDagen(4);
+        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  op naam van: Mijnheer de Vries (korting: 10.0%)\n  aantal dagen: 4 en dat kost 180.0", ah.toString());
     }
 
     @Test
     public void toStringWelAutoWelKlantZonderKorting(){
-        AutoHuur ah1 = new AutoHuur();
-        Auto a1 = new Auto("Peugeot 207", 50);
-        Klant k = new Klant("Mijnheer de Vries");
-        ah1.setHuurder(k);
-        ah1.setGehuurdeAuto(a1);
-        ah1.setAantalDagen(4);
-        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 4 en dat kost 200.0", ah1.toString());
+        ah.setHuurder(k);
+        ah.setGehuurdeAuto(a);
+        ah.setAantalDagen(4);
+        assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 4 en dat kost 200.0", ah.toString());
+    }
+
+    @Test
+    public void OngeldigeAuto(){
+        assertEquals("er is geen auto bekend", ongeldigeAuto.toString());
+    }
+
+    @Test
+    public void OngeldigeKlant(){
+        assertEquals("er is geen huurder bekend", ongeldigeKlant.toString());
+    }
+
+    @Test
+    public void OngeldigBeide(){
+        ah.setHuurder(ongeldigeKlant);
+        ah.setGehuurdeAuto(ongeldigeAuto);
+        assertEquals("  er is geen auto bekend\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
 }
