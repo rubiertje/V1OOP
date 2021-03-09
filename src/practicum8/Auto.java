@@ -21,7 +21,7 @@ public class Auto extends Voertuig {
 
     @Override
     public boolean equals(Object obj) {
-        if (kenteken == obj) {
+        if (obj.equals(kenteken)) {
             return true;
         } else {
             return false;

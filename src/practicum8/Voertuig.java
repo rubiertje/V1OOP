@@ -15,6 +15,6 @@ public abstract class Voertuig implements Goed{
     public abstract boolean equals(Object obj);
 
     public String toString(){
-        return "Voertuig: " + type + " met bouwjaar " + bouwjaar + " heeft een waarde van: " + huidigeWaarde();
+        return "Voertuig: " + type + " met bouwjaar " + bouwjaar + " heeft een waarde van: €" + String.format("%.2f", huidigeWaarde());
     }
 }

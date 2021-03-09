@@ -2,26 +2,34 @@ package practicum8;
 
 public class Main {
     public static void main(String[] args) {
-        BedrijfsInventaris bi1 = new BedrijfsInventaris("LAB31", 24000.00);
+        BedrijfsInventaris bestewinkel = new BedrijfsInventaris("Ruben_store", 120000.00);
 
-        Computer c1 = new Computer("Desktop", "00:0a:95:9d:68:16", 1200.00, 2020);
-        Computer c2 = new Computer("Desktop", "00:0a:95:9d:68:16", 1200.00, 2020);
+        Computer c1 = new Computer("Laptop", "00:32:95:3j:68:16", 1000.00, 2019);
+        Computer c2 = new Computer("Laptop", "00:32:95:3j:68:16", 1000.00, 2019);
 
-        Fiets f1 = new Fiets("Stads Fiets", 300, 2021, 84567);
-        Fiets f2 = new Fiets("Stads Fiets", 300, 2021, 84567);
+        Auto a1 = new Auto("Jaguar F-Type", 54000.00, 2020, "SKK-01-JO");
+        Auto a2 = new Auto("Jaguar F-Type", 54000.00, 2020, "SKK-01-JO");;
 
-        Auto a1 = new Auto("Tesla Cybertruck", 10, 2020, "DAD-EM-12");
-        Auto a2 = new Auto("Tesla Cybertruck", 10, 2020, "DAD-EM-12");
+        Fiets f1 = new Fiets("Mountainbike", 600, 2020, 7854392);
+        Fiets f2 = new Fiets("Mountainbike", 600, 2020, 7854392);
 
-        Computer c3 = new Computer("Laptop", "00:0a:90:9c:62:18", 750.00, 2015);
-        Fiets f3 = new Fiets("Oma Fiets", 1565, 2018, 4);
-        Auto a3 = new Auto("Super snelle coole auto", 12560, 2020, "DAD-EM-12");
+        Computer c3 = new Computer("Desktop", "00:0a:99:4r:87:23", 2000.00, 2018);
+        Fiets f3 = new Fiets("Race fiets", 200.00, 2018, 67582349);
+        Auto a3 = new Auto("Opel Grandland X", 40000.00, 2019, "FRG-67-NMR");
 
-        bi1.schafAan(c1);
-        bi1.schafAan(c2);
-        bi1.schafAan(c3);
-        bi1.schafAan(a1);
+        Auto veelteduur = new Auto("Ferrari Exclusive", 2000000.00, 2020, "SKK-01-RR");
 
-        System.out.println(bi1);
+        bestewinkel.schafAan(c1);
+        bestewinkel.schafAan(c2);
+        bestewinkel.schafAan(a1);
+        bestewinkel.schafAan(a2);
+        bestewinkel.schafAan(f1);
+        bestewinkel.schafAan(f2);
+        bestewinkel.schafAan(c3);
+        bestewinkel.schafAan(f3);
+        bestewinkel.schafAan(a3);
+        bestewinkel.schafAan(veelteduur);
+
+        System.out.println(bestewinkel);
     }
 }

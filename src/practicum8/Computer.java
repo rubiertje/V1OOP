@@ -26,7 +26,7 @@ public class Computer implements Goed{
 
     @Override
     public boolean equals(Object obj){
-        if (macAdres == obj){
+        if (obj.equals(macAdres)){
             return true;
         }else{
             return false;
@@ -34,6 +34,6 @@ public class Computer implements Goed{
     }
 
     public String toString(){
-        return "De computer: " + type + " met het productiejaar " + productieJaar + " is op dit moment €" + huidigeWaarde() + " waard.";
+        return "De computer: " + type + " met het productiejaar " + productieJaar + " heeft een waarde van €" + String.format("%.2f", huidigeWaarde());
     }
 }

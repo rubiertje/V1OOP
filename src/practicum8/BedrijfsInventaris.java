@@ -13,13 +13,15 @@ public class BedrijfsInventaris {
         this.alleGoederen = new ArrayList<Goed>();
     }
 
+    public double getBudget() {
+        return budget;
+    }
+
     public void schafAan(Goed g){
         boolean aankoop = true;
-//        System.out.println(g.toString() + " 1");
         for (Goed goed: alleGoederen) {
-//            System.out.println(goed.toString() + " 2");
             if (g.equals(goed)){
-                System.out.println("joeeeee");
+                aankoop = false;
             }
         }
         if (aankoop) {
@@ -31,10 +33,9 @@ public class BedrijfsInventaris {
     }
 
     public String toString(){
-        StringBuilder gehele_inventaris = new StringBuilder("de hele inventaris:\n");
+        StringBuilder gehele_inventaris = new StringBuilder("het gehele inventaris:\n");
         for (Goed goed: alleGoederen) {
-            gehele_inventaris.append(goed);
-            gehele_inventaris.append("\n");
+            gehele_inventaris.append(goed).append("\n");
         }
         return gehele_inventaris.toString();
     }
