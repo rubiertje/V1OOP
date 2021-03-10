@@ -15,7 +15,7 @@ class MainTest {
     private Fiets f2;
     private Auto veelteduur;
     @BeforeEach
-    public void voorElkeTest(){
+    public void initialize(){
         this.bestewinkel = new BedrijfsInventaris("Ruben_store", 120000.00);
 
         this.c1 = new Computer("Laptop", "00:32:95:3j:68:16", 1000.00, 2019);

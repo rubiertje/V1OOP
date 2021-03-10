@@ -24,6 +24,7 @@ public class BedrijfsInventaris {
             if (budget > g.huidigeWaarde()) {
                 budget -= g.huidigeWaarde();
                 alleGoederen.add(g);
+//                System.out.println("Item " + g.toString() + " gekocht en daarme is je budget €" + String.format("%.2f", budget) + ".");
             }
         }
     }
