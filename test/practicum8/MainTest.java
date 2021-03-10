@@ -14,6 +14,7 @@ class MainTest {
     private Fiets f1;
     private Fiets f2;
     private Auto veelteduur;
+
     @BeforeEach
     public void initialize(){
         this.bestewinkel = new BedrijfsInventaris("Ruben_store", 120000.00);
