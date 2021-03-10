@@ -8,7 +8,7 @@ public class Main {
         Computer c2 = new Computer("Laptop", "00:32:95:3j:68:16", 1000.00, 2019);
 
         Auto a1 = new Auto("Jaguar F-Type", 54000.00, 2020, "SKK-01-JO");
-        Auto a2 = new Auto("Jaguar F-Type", 54000.00, 2020, "SKK-01-JO");;
+        Auto a2 = new Auto("Jaguar F-Type", 54000.00, 2020, "SKK-01-JO");
 
         Fiets f1 = new Fiets("Mountainbike", 600, 2020, 7854392);
         Fiets f2 = new Fiets("Mountainbike", 600, 2020, 7854392);

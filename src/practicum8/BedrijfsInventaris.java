@@ -13,10 +13,6 @@ public class BedrijfsInventaris {
         this.alleGoederen = new ArrayList<Goed>();
     }
 
-    public double getBudget() {
-        return budget;
-    }
-
     public void schafAan(Goed g){
         boolean aankoop = true;
         for (Goed goed: alleGoederen) {

@@ -24,7 +24,6 @@ public class Computer implements Goed{
         return prijs;
     }
 
-    @Override
     public boolean equals(Object obj){
         if (obj.equals(macAdres)){
             return true;

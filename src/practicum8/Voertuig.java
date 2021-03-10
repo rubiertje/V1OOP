@@ -11,7 +11,6 @@ public abstract class Voertuig implements Goed{
         this.bouwjaar = bouwjaar;
     }
 
-    @Override
     public abstract boolean equals(Object obj);
 
     public String toString(){
