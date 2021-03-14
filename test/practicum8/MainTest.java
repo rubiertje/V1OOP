@@ -35,7 +35,7 @@ class MainTest {
     public void tweeComputers(){
         bestewinkel.schafAan(c1);
         bestewinkel.schafAan(c2);
-        assertEquals("het gehele inventaris:\nDe computer: Laptop met het productiejaar 2019 heeft een waarde van €360,00\n",bestewinkel.toString());
+        assertEquals("het gehele inventaris:\nComputer: Laptop met het productiejaar 2019 heeft een waarde van €360,00\n",bestewinkel.toString());
     }
 
     @Test
