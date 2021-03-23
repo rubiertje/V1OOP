@@ -15,6 +15,7 @@ public class Computer implements Goed{
         this.productieJaar = productieJaar;
     }
 
+
     public double huidigeWaarde(){
         int jaarverschil = LocalDate.now().getYear() - productieJaar;
         double prijs = aanschafPrijs;
@@ -25,11 +26,13 @@ public class Computer implements Goed{
     }
 
     public boolean equals(Object obj){
-        if (obj.equals(macAdres)){
-            return true;
-        }else{
-            return false;
+        if (obj instanceof Computer){
+            Computer computer = (Computer) obj;
+            if (macAdres.equals(computer.macAdres)){
+                return true;
+            }
         }
+        return false;
     }
 
     public String toString(){

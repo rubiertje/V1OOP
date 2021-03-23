@@ -21,10 +21,14 @@ public class Fiets extends Voertuig{
 
     @Override
     public boolean equals(Object obj) {
-        if (obj.equals(framenummer)){
-            return true;
-        }else {
-            return false;
+        if (obj instanceof Fiets) {
+            Fiets fiets = (Fiets) obj;
+            String framenummer1 = String.valueOf(fiets.framenummer);
+            String framenummer2 = String.valueOf(framenummer);
+            if (framenummer1.equals(framenummer2)) {
+                return true;
+            }
         }
+        return false;
     }
 }
