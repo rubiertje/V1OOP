@@ -16,8 +16,9 @@ public class BedrijfsInventaris {
     public void schafAan(Goed g){
         boolean aankoop = true;
         for (Goed goed: alleGoederen) {
-            if (g.equals(goed)){
+            if (g.equals(goed)) {
                 aankoop = false;
+                break;
             }
         }
         if (aankoop) {
