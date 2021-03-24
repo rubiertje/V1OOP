@@ -78,21 +78,24 @@ class AutoHuurTest {
     }
 
     @Test
-    public void OngeldigeAuto(){
-        ah.setHuurder(k);
-        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
-    }
-
-    @Test
-    public void OngeldigeKlant(){
+    public void toStringInvoerNaamFout(){
+        ah.setHuurder(ongeldigeKlant);
         ah.setGehuurdeAuto(a);
         assertEquals("  autotype: Peugeot 207 met prijs per dag: 50.0\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
-
     @Test
-    public void BeideOngeldig(){
+    public void toStringInvoerAutoFout(){
+        ah.setHuurder(k);
+        ah.setGehuurdeAuto(ongeldigeAuto);
+        ah.setAantalDagen(1);
+        assertEquals("  er is geen auto bekend\n  op naam van: Mijnheer de Vries (korting: 0.0%)\n  aantal dagen: 1 en dat kost 0.0", ah.toString());
+    }
+    @Test
+    public void toStringHelemaalFout(){
         ah.setHuurder(ongeldigeKlant);
         ah.setGehuurdeAuto(ongeldigeAuto);
         assertEquals("  er is geen auto bekend\n  er is geen huurder bekend\n  aantal dagen: 0 en dat kost 0.0", ah.toString());
     }
+
+
 }
