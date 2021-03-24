@@ -31,5 +31,6 @@ public class Main {
         bestewinkel.schafAan(veelteduur);
 
         System.out.println(bestewinkel);
+        System.out.println( "Aantal keer Utils functie aangeroepen: " + Utils.getAantalAangeroepen());
     }
 }

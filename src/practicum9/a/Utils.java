@@ -11,4 +11,8 @@ public class Utils {
         aantalAangeroepen ++;
         return String.format("%." + precisie + "f", bedrag);
     }
+
+    public static int getAantalAangeroepen(){
+        return aantalAangeroepen;
+    }
 }
