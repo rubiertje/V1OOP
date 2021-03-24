@@ -1,10 +1,14 @@
 package les2.oefening2;
 
-public class Product {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Product implements Serializable {
     private String naam;
     private String code;
     private Double prijs;
     private Double btw;
+    private ArrayList<Product> alleProducten;
 
     public Product(String naam, String code, Double prijs){
         this.naam = naam;
