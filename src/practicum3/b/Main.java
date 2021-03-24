@@ -16,4 +16,4 @@ public class Main {
     }
 }
 
-/** Ik denk dat het bestand kapot gaat, want je gooit een foutmelding op en als je deze foutmelding niet opvangt dan gaat het programma dus kapot. Na het testen blijkt dat ook.**/
+/** Ik denk dat het bestand.txt kapot gaat, want je gooit een foutmelding op en als je deze foutmelding niet opvangt dan gaat het programma dus kapot. Na het testen blijkt dat ook.**/
